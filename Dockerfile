@@ -33,7 +33,7 @@ RUN apt-get update \
 
 WORKDIR /usr/local/gym
 RUN mkdir -p gym && touch gym/__init__.py
-COPY ./gym/version.py ./gym
+# COPY ./gym/version.py ./gym
 COPY ./requirements.txt .
 COPY ./setup.py .
 RUN pip install -e .[all]
